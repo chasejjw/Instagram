@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import Parse
 
 class HomeViewController: UIViewController {
 
+    @IBAction func onLogOut(_ sender: Any) {
+        PFUser.logOutInBackground(block: { (error: Error?) in
+            // PFUser.currentUser() will now be nil
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
         // Do any additional setup after loading the view.
     }
 
