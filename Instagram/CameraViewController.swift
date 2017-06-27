@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  CameraViewController.swift
 //  Instagram
 //
 //  Created by Chase Warren on 6/27/17.
@@ -7,16 +7,12 @@
 //
 
 import UIKit
-import Parse
 
-class HomeViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    @IBAction func onLogOut(_ sender: Any) {
-        PFUser.logOutInBackground(block: { (error: Error?) in })
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 

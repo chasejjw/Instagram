@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://boiling-garden-78186.herokuapp.com/parse"
             })
         )
+        
         return true
     }
 
