@@ -198,6 +198,7 @@
                     </view>
                     <connections>
                         <outlet property="captionField" destination="zWS-zR-beL" id="W7i-28-e3y"/>
+                        <outlet property="postImage" destination="AbR-8n-Fms" id="snE-TB-SFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-RL-BZV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,12 +12,12 @@ import Parse
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var captionField: UITextField!
+    @IBOutlet weak var postImage: UIImageView!
     
-    var postImage: UIImage
     var postCaption: String = ""
     
     @IBAction func onPost(_ sender: Any) {
-        postCaption = captionField.text
+        postCaption = captionField.text!
     }
     
     @IBAction func onPick(_ sender: Any) {
@@ -31,6 +31,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
             
             let image = info[UIImagePickerControllerEditedImage] as! UIImage
+            
+            postImage.image = image
             
             // let size = CGSize(width: <#T##Int#>, height: <#T##Int#>)
             // let resizedOriginalImage = resize(image: originalImage, newSize: )
