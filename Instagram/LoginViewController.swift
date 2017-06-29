@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func onEditing(_ sender: Any) {
+        passwordField.isSecureTextEntry = true
+    }
+    
     @IBAction func onSignUp(_ sender: Any) {
         
         let newUser = PFUser()
