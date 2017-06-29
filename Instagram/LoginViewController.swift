@@ -14,6 +14,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     @IBAction func onLogin(_ sender: Any) {
         let username = usernameField.text ?? ""
@@ -49,9 +52,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if PFUser.current() != nil {
-            self.performSegue(withIdentifier: "login", sender: nil)
-        }
         // Do any additional setup after loading the view.
     }
 

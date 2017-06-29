@@ -23,6 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://boiling-garden-78186.herokuapp.com/parse"
             })
         )
+
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("logoutNotfication"), object: nil, queue: OperationQueue.main, using: { (Notification) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "loginID") as! LoginViewController
+            self.window?.rootViewController = vc
+        })
+        
+        if PFUser.current() != nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "navID") as! UINavigationController
+                self.window?.rootViewController = vc
+        }
         
         return true
     }

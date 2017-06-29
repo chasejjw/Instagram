@@ -14,6 +14,9 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var imagePreview: UIImageView!
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     var postCaption: String = ""
     
