@@ -49,11 +49,13 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        if let indexPath = tableView.indexPath(for: cell) {
-            let prepareObject = homePosts?[indexPath.row]
-            let detailViewController = segue.destination as! DetailViewController
-            detailViewController.detailObject = prepareObject
+        if segue.identifier == "detail" {
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell) {
+                let prepareObject = homePosts?[indexPath.row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.detailObject = prepareObject
+            }
         }
     }
 

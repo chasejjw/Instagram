@@ -277,7 +277,7 @@
                                             <outlet property="postImage" destination="N7B-pi-F47" id="mp6-WE-Bf5"/>
                                             <outlet property="profilePicture" destination="WXX-1s-hmA" id="btT-H3-krO"/>
                                             <outlet property="usernameLabel" destination="vqt-oF-Rom" id="x4S-bQ-lEu"/>
-                                            <segue destination="soG-lH-gTl" kind="presentation" id="qL8-Fo-cuW"/>
+                                            <segue destination="soG-lH-gTl" kind="presentation" identifier="detail" id="qL8-Fo-cuW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -321,7 +321,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="IMG_0001"/>
                                 <connections>
-                                    <segue destination="V0X-Ms-aay" kind="presentation" id="3ao-tj-cfz"/>
+                                    <segue destination="V0X-Ms-aay" kind="presentation" identifier="camera" id="3ao-tj-cfz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -336,6 +336,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T59-ee-9ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="-685.00749625187416"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="RtC-MG-nvR">
+            <objects>
+                <viewController id="TGW-lp-ihf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Idm-hL-ooK"/>
+                        <viewControllerLayoutGuide type="bottom" id="uRc-eD-5Un"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dFs-7e-naM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="selected_prof" id="rcG-YA-PFK"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSn-Lr-bo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="55"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="1RH-lM-4Ns">
@@ -404,7 +424,7 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRM-Ho-vLR">
                                 <rect key="frame" x="147" y="518" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="camera_chrome"/>
+                                <state key="normal" title="Button" image="new_camera_button"/>
                                 <connections>
                                     <action selector="onPick:" destination="V0X-Ms-aay" eventType="touchUpInside" id="9cq-oq-rTY"/>
                                 </connections>
@@ -438,11 +458,11 @@
             </objects>
             <point key="canvasLocation" x="889" y="56"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="jPv-fn-MUA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="cWe-hd-BGj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="AU7-vv-8v8"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="selected_home" id="AU7-vv-8v8"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pgb-sr-yHT">
@@ -475,6 +495,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="cWe-hd-BGj" kind="relationship" relationship="viewControllers" id="ogH-lp-r30"/>
+                        <segue destination="TGW-lp-ihf" kind="relationship" relationship="viewControllers" id="dEK-aL-73X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1yt-YK-710" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -485,12 +506,16 @@
     <resources>
         <image name="13473287_1758004267779484_1284566540_a" width="320" height="320"/>
         <image name="Gradient" width="1125" height="384"/>
+        <image name="Home" width="22" height="20"/>
         <image name="IMG_0001" width="54" height="48"/>
         <image name="IMG_0004" width="210" height="45"/>
         <image name="Instagram_title" width="1200" height="429"/>
         <image name="Instagram_title_white" width="1200" height="429"/>
+        <image name="Profile" width="22" height="21"/>
         <image name="bookmark" width="41" height="45"/>
-        <image name="camera_chrome" width="800" height="800"/>
         <image name="login_page" width="621" height="358"/>
+        <image name="new_camera_button" width="124" height="124"/>
+        <image name="selected_home" width="22" height="21"/>
+        <image name="selected_prof" width="22" height="21"/>
     </resources>
 </document>
