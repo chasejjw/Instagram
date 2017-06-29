@@ -67,6 +67,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 //        
 //        return newImage!
 //    }
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func onPictureTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     
     @IBAction func onCancel(_ sender: Any) {
         dismiss(animated: true, completion: nil)

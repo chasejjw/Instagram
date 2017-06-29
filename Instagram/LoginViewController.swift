@@ -32,6 +32,9 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
     @IBAction func onEditing(_ sender: Any) {
         passwordField.isSecureTextEntry = true
     }

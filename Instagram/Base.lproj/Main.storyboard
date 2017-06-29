@@ -86,6 +86,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0HK-Jr-yYc" appends="YES" id="ceG-be-U4A"/>
+                        </connections>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
@@ -95,6 +99,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="0HK-Jr-yYc">
+                    <connections>
+                        <action selector="onTap:" destination="BYZ-38-t0r" id="Lfa-ml-eE2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1036" y="142.57871064467767"/>
         </scene>
@@ -168,6 +177,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="captionLabel" destination="boi-gw-SzJ" id="Oyu-zR-H5h"/>
                                             <outlet property="postImage" destination="N7B-pi-F47" id="mp6-WE-Bf5"/>
@@ -246,6 +258,13 @@
                                 <rect key="frame" x="0.0" y="77" width="375" height="375"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="iBn-Es-Vco" appends="YES" id="VkG-SP-l1I"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-Aa-pkG">
                                 <rect key="frame" x="8" y="1" width="48" height="30"/>
@@ -290,6 +309,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="JfE-23-rlE" appends="YES" id="JPJ-4k-azX"/>
+                        </connections>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -300,6 +323,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DmC-RL-BZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JfE-23-rlE">
+                    <connections>
+                        <action selector="onTap:" destination="V0X-Ms-aay" id="lTA-Pv-W8Y"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="iBn-Es-Vco">
+                    <connections>
+                        <action selector="onPictureTap:" destination="V0X-Ms-aay" id="QC5-Py-Lem"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2648.8000000000002" y="142.57871064467767"/>
         </scene>
