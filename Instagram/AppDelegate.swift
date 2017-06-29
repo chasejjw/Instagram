@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if PFUser.current() != nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "navID") as! UINavigationController
+                let vc = storyboard.instantiateViewController(withIdentifier: "navID") as! UITabBarController
                 self.window?.rootViewController = vc
         }
         
