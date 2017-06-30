@@ -53,14 +53,14 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Credits
 
-List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+3rd party libraries, icons, graphics, or other assets used in Instagram.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I had trouble implementing a segue from the posts on the homescreen to the detail view. Initially I was using a button overlaying the image, but ultimately decided to use the cell as a button.
 
 ## License
 
